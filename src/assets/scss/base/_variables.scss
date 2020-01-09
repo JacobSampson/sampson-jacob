@@ -1,0 +1,43 @@
+/* variables */
+
+:root {
+
+  /* pallete */
+
+  --col-primary: #E12F2F;
+  --col-secondary: #AF2222;
+
+  --col-bkgd: #0C0C0C;
+  --col-frgd: #202020;
+
+  --col-warning: #AF2222;
+  --col-valid: #1fc551;
+
+  --col-text: #FFFFFF;
+
+  /* font */
+
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/* pallete */
+
+$col-primary: var(--col-primary);
+$col-secondary: var(--col-secondary);
+
+$col-warning: var(--col-warning);
+$col-valid: var(--col-valid);
+
+$col-bkgd: var(--col-bkgd);
+$col-frgd: var(--col-frgd);
+
+$col-text: var(--col-text);
+
+/* font */
+
+$font-family: var(--font-family);
+
+/* sizing */
+
+/* styling */

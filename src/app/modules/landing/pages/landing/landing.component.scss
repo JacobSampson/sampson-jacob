@@ -1,0 +1,29 @@
+.landing {
+
+  &__heading {
+
+  }
+
+  &__subheading {
+
+  }
+
+  &__videos {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__video {
+    margin: 1em;
+
+    background-color: black;
+  }
+
+  &__section-title {
+
+  }
+
+  &__form {
+
+  }
+}

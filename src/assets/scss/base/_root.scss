@@ -1,0 +1,8 @@
+@import './variables';
+
+body {
+  box-sizing: border-box;
+  position: absolute;
+
+  font-family: $font-family;
+}

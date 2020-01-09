@@ -1,0 +1,95 @@
+<form action="" (ngSubmit)="onSubmit()" class="form" #form="ngForm">
+
+  <div class="form__group">
+    <!-- <label for="firstName">First Name</label> -->
+    <input class="form__control"
+      name="firstName"
+      #firstName="ngModel"
+      [(ngModel)]="model.firstName"
+      required
+      placeholder="First Name"
+      type="text">
+    <div class="form__alert"
+      [hidden]="firstName.valid || firstName.pristine">
+      First name is required
+    </div>
+  </div>
+
+  <div class="form__group">
+    <input class="form__control"
+      name="lastName"
+      #lastName="ngModel"
+      [(ngModel)]="model.lastName"
+      required
+      placeholder="Last Name"
+      type="text">
+    <div class="form__alert"
+      [hidden]="lastName.valid || lastName.pristine">
+      Last name is required
+    </div>
+  </div>
+
+  <div class="form__group">
+    <input class="form__control"
+      name="emailAddress"
+      #emailAddress="ngModel"
+      [(ngModel)]="model.emailAddress"
+      required
+      placeholder="Email Address"
+      type="text">
+    <div class="form__alert"
+      [hidden]="emailAddress.valid || emailAddress.pristine">
+      Email address is required
+    </div>
+  </div>
+
+  <div class="form__group">
+    <input class="form__control"
+      name="phoneNumber"
+      #phoneNumber="ngModel"
+      [(ngModel)]="model.phoneNumber"
+      required
+      placeholder="(000) 000-0000"
+      type="text">
+    <div class="form__alert"
+      [hidden]="phoneNumber.valid || phoneNumber.pristine">
+      Phone number is required
+    </div>
+  </div>
+
+  <div class="form__group">
+    <input class="form__control"
+      name="location"
+      #location="ngModel"
+      [(ngModel)]="model.location"
+      required
+      placeholder="Location"
+      type="text">
+    <div class="form__alert"
+      [hidden]="emailAddress.valid || emailAddress.pristine">
+      Location is required
+    </div>
+  </div>
+
+  <div class="form__group">
+    <input class="form__control"
+      name="instagram"
+      #location="ngModel"
+      [(ngModel)]="model.instagramHandle"
+      placeholder="Instagram handle"
+      type="text">
+  </div>
+
+  <!-- <div class="form__group">
+    <select class="form__control" id="selection" required>
+      <option *ngFor="let selection of selections" [value]="selection">{{selection}}</option>
+    </select>
+  </div> -->
+
+  <button class="form__button"
+    [disabled]="!form.form.valid"
+    type="submit">
+    Submit
+  </button>
+
+</form>

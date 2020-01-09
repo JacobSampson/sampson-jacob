@@ -1,0 +1,27 @@
+@import '~src/assets/scss/base/variables';
+
+.form {
+
+  &__group {
+
+  }
+
+  &__control {
+
+    &.ng-valid[required], &.ng-valid.required {
+      border-left: 5px solid $col-valid;
+    }
+
+    &.ng-invalid:not(form)  {
+      border-left: 5px solid $col-warning;
+    }
+  }
+
+  &__alert {
+
+  }
+
+  &__button {
+
+  }
+}
