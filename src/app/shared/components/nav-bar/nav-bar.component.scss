@@ -1,14 +1,33 @@
+@import '~src/assets/scss/base/variables';
+
 .nav-bar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1em;
+
+  background-color: $col-frgd;
+  color: white;
 
   &__logo {
 
   }
 
   &__items {
-
+    list-style: none;
   }
 
   &__item {
 
+  }
+
+  &__link {
+    color: $col-text-secondary;
+    text-decoration: none;
+
+    &:hover {
+      color: $col-text-tertiary;
+    }
   }
 }

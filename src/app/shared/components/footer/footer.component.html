@@ -4,26 +4,54 @@
     CALIBER SMART
   </div>
 
-  <ul class="footer__links">
-    <li class="footer__link">
-      facebook
+  <ul class="footer__socials">
+    <li class="footer__social">
+      <i class="footer__social-icon fab fa-facebook-f fa-lg">
+        <a href="https://facebook.com" class="footer__social-link"></a>
+      </i>
     </li>
-    <li class="footer__link">
-      vimeo
+    <li class="footer__social">
+      <i class="footer__social-icon fab fa-instagram fa-lg">
+        <a href="https://facebook.com" class="footer__social-link"></a>
+      </i>
     </li>
-    <li class="footer__link">
-      linked in
-    </li>
-    <li class="footer__link">
-      instagram
+    <li class="footer__social">
+      <i class="footer__social-icon fab fa-linkedin-in fa-lg">
+        <a href="https://facebook.com" class="footer__social-link"></a>
+      </i>
     </li>
   </ul>
 
-  <div class="footer__pages">
-    <p class="footer__page" [routerLink]>HOME</p>
-    <p class="footer__page">ABOUT</p>
-    <p class="footer__page">CAREERS</p>
-    <p class="footer__page">PRIVACY POLICY</p>
-  </div>
+  <ul class="footer__pages">
+    <li class="footer__page">
+      <a class="footer__page-link"
+        routerLink="/"
+        routerLinkActive="footer__page-link--selected"
+        [routerLinkActiveOptions]="{exact: true}">
+        HOME
+      </a>
+    </li>
+    <li class="footer__page">
+      <a class="footer__page-link"
+        routerLink="/about"
+        routerLinkActive="footer__page-link--selected">
+        ABOUT
+      </a>
+    </li>
+    <li class="footer__page">
+      <a class="footer__page-link"
+        routerLink="/careers"
+        routerLinkActive="footer__page-link--selected">
+        CAREERS
+      </a>
+    </li>
+    <li class="footer__page">
+      <a class="footer__page-link"
+        routerLink="/privacy-policy"
+        routerLinkActive="footer__page-link--selected">
+        PRIVACY POLICY
+      </a>
+    </li>
+  </ul>
 
 </footer>

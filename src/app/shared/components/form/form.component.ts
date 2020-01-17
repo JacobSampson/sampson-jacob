@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import ContactInfo from 'src/app/core/models/contact-info';
+import { ApplicationsService } from 'src/app/core/firebase/applications.service';
 
 @Component({
   selector: 'app-form',
@@ -18,13 +19,13 @@ export class FormComponent implements OnInit {
     null  // resume
   );
 
-  constructor() { }
+  constructor(private applicationsService: ApplicationsService) { }
 
   ngOnInit() {
   }
 
   onSubmit() {
-    console.log(this.model);
+    this.applicationsService.save(this.model);
   }
 
 }

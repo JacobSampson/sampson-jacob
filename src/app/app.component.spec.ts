@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'caliber'`, () => {
+  it(`should have as title 'caliber-tribe'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('caliber');
+    expect(app.title).toEqual('caliber-tribe');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('caliber app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('caliber-tribe app is running!');
   });
 });

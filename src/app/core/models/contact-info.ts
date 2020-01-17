@@ -1,6 +1,6 @@
 export default class ContactInfo {
-
   constructor(
+    public id: string,
     public firstName: string,
     public lastName: string,
     public emailAddress: string,
@@ -9,4 +9,15 @@ export default class ContactInfo {
     public instagramHandle?: string,
     public resume?: File | any
   ) { }
+
+  fill() {
+    this.id = this.id || '';
+    this.firstName = this.firstName || '';
+    this.lastName = this.lastName || '';
+    this.emailAddress = this.emailAddress || '';
+    this.phoneNumber = this.phoneNumber || '';
+    this.location = this.location || '';
+    this.instagramHandle = this.instagramHandle || '';
+    this.resume = this.resume || '';
+  }
 }

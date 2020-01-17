@@ -4,8 +4,8 @@
 
   /* pallete */
 
-  --col-primary: #E12F2F;
-  --col-secondary: #AF2222;
+  --col-primary: #FFC300;
+  --col-secondary: #ff1a1a;
 
   --col-bkgd: #0C0C0C;
   --col-frgd: #202020;
@@ -13,7 +13,10 @@
   --col-warning: #AF2222;
   --col-valid: #1fc551;
 
-  --col-text: #FFFFFF;
+  --col-text-primary: rgb(0, 0, 0);
+  --col-text-secondary: #FFFFFF;
+  --col-text-tertiary: rgba(255, 255, 255, 0.534);
+  --col-text-disabled: rgba(255, 255, 255, 0.349);
 
   /* font */
 
@@ -32,7 +35,10 @@ $col-valid: var(--col-valid);
 $col-bkgd: var(--col-bkgd);
 $col-frgd: var(--col-frgd);
 
-$col-text: var(--col-text);
+$col-text-primary: var(--col-text-primary);
+$col-text-secondary: var(--col-text-secondary);
+$col-text-tertiary: var(--col-text-tertiary);
+$col-text-disabled: var(--col-text-disabled);
 
 /* font */
 

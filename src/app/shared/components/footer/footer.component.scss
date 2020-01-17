@@ -1,22 +1,64 @@
+@import '~src/assets/scss/base/variables';
+
 .footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1em;
+
+  background-color: $col-bkgd;
+  color: white;
 
   &__logo {
 
   }
 
-  &__links {
+  &__socials {
+    // float: right;
+
+    list-style: none;
+  }
+
+  &__social {
 
   }
 
-  &__link {
+  &__social-icon {
+    transition: 0.15s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 50%;
+    }
+  }
+
+  &__social-link {
 
   }
 
   &__pages {
-
+    list-style: none;
   }
 
   &__page {
 
+  }
+
+  &__page-link {
+    color: $col-text-secondary;
+    text-decoration: none;
+
+    transition: 0.15s ease-in-out;
+
+    &:hover {
+      color: $col-text-tertiary;
+    }
+
+    &--selected, &--selected:hover {
+      user-select: none;
+      cursor: default;
+      color: $col-text-disabled;
+    }
   }
 }
