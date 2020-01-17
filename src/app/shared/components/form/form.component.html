@@ -50,7 +50,7 @@
       [(ngModel)]="model.phoneNumber"
       required
       placeholder="(000) 000-0000"
-      type="text">
+      type="number">
     <div class="form__alert"
       [hidden]="phoneNumber.valid || phoneNumber.pristine">
       Phone number is required
@@ -64,7 +64,7 @@
       [(ngModel)]="model.location"
       required
       placeholder="Location"
-      type="text">
+      type="email">
     <div class="form__alert"
       [hidden]="emailAddress.valid || emailAddress.pristine">
       Location is required
@@ -80,11 +80,24 @@
       type="text">
   </div>
 
-  <!-- <div class="form__group">
+  <div class="form__group">
+    <input class="form__resume"
+      id="resume"
+      name="resume"
+      #location="ngModel"
+      [(ngModel)]="model.resume"
+      type="file">
+    <label class="form__label" for="resume">
+      <i class="fas fa-file-upload"></i>
+      Resume
+    </label>
+  </div>
+
+  <div class="form__group">
     <select class="form__control" id="selection" required>
       <option *ngFor="let selection of selections" [value]="selection">{{selection}}</option>
     </select>
-  </div> -->
+  </div>
 
   <button class="form__button"
     [disabled]="!form.form.valid"

@@ -15,7 +15,7 @@ export class ApplicationsService {
 
     // Save resume, if attached
     if (contactInfo.resume) {
-      const path = `resume_${contactInfo.id}`;
+      const path = `resumes/resume_${contactInfo.id}`;
       this.fst.upload(path, contactInfo.resume).then(resume => {
         contactInfo.resume = resume.ref.fullPath;
         contactInfo.fill();

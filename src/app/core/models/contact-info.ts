@@ -1,3 +1,5 @@
+import { AffiliateType } from './affiliate-type';
+
 export default class ContactInfo {
   constructor(
     public id: string,
@@ -7,7 +9,8 @@ export default class ContactInfo {
     public phoneNumber: number | string,
     public location: string,
     public instagramHandle?: string,
-    public resume?: File | any
+    public resume?: File | any,
+    public affiliate?: Map<AffiliateType, string> | any
   ) { }
 
   fill() {
@@ -19,5 +22,6 @@ export default class ContactInfo {
     this.location = this.location || '';
     this.instagramHandle = this.instagramHandle || '';
     this.resume = this.resume || '';
+    this.affiliate = this.affiliate || '';
   }
 }

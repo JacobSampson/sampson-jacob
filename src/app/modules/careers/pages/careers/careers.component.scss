@@ -1,14 +1,61 @@
+@import '~src/assets/scss/base/variables';
+
 .careers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template:
+    'section1 section1 section2 section2'
+    'section3 section3 section3 section3'
+    'apply    apply    apply    apply';
 
-    &__subheading {
+  &__section {
+    padding: 6em 5em;
 
+    &:nth-of-type(1) {
+      grid-area: section1;
+
+      background-color: $col-primary;
     }
 
-    &__paragraph {
+    &:nth-of-type(2) {
+      grid-area: section2;
 
+      color: $col-text-secondary;
+      background-color: $col-secondary;
     }
 
-    &__form {
-        
+    &:nth-of-type(3) {
+      grid-area: section3;
+
+      color: $col-text-secondary;
+      background-color: $col-bkgd;
     }
+
+    &:nth-of-type(4) {
+      grid-area: apply;
+    }
+  }
+
+  &__subheading {
+    font-size: 3em;
+    margin-top: 0;
+  }
+
+  &__paragraph {
+    line-height: 2em;
+  }
+
+  &__line {
+    line-height: 1.2em;
+  }
+
+  &__form {
+
+  }
+
+  @media screen and (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
