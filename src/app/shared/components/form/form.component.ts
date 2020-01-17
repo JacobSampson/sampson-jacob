@@ -22,6 +22,11 @@ export class FormComponent implements OnInit {
     null, // affiliate
   );
 
+  selections(): Array<string> {
+    const keys = Object.keys(AffiliateType);
+    return keys.slice(keys.length / 2, keys.length);
+  }
+
   constructor(private applicationsService: ApplicationsService) { }
 
   ngOnInit() {

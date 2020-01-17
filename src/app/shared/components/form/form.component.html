@@ -95,7 +95,7 @@
 
   <div class="form__group">
     <select class="form__control" id="selection" required>
-      <option *ngFor="let selection of selections" [value]="selection">{{selection}}</option>
+      <option *ngFor="let selection of selections()" [value]="selection">{{selection}}</option>
     </select>
   </div>
 
