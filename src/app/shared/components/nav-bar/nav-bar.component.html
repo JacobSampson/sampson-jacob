@@ -1,19 +1,16 @@
 <nav class="nav-bar">
-  <div class="nav-bar__logo">
-    CALIBER
-  </div>
   <ul class="nav-bar__items">
-    <li class="nav-bar__item"
-      routerLinkActive="nav-bar__item--selected">
-      <a routerLink="/" class="nav-bar__link">Home</a>
+    <li class="nav-bar__item">
+      <a routerLink="/" class="nav-bar__link">LOGO</a>
     </li>
-    <li class="nav-bar__item"
-      routerLinkActive="nav-bar__item--selected">
-      <a routerLink="/about" class="nav-bar__link">About</a>
+    <li class="nav-bar__item">
+      <a routerLink="/" class="nav-bar__link" routerLinkActive="nav-bar__link--selected" [routerLinkActiveOptions]="{exact: true}">HOME</a>
     </li>
-    <li class="nav-bar__item"
-      routerLinkActive="nav-bar__item--selected">
-      <a routerLink="/careers" class="nav-bar__link">Careers</a>
+    <li class="nav-bar__item">
+      <a routerLink="/about" class="nav-bar__link" routerLinkActive="nav-bar__link--selected">ABOUT</a>
+    </li>
+    <li class="nav-bar__item">
+      <a routerLink="/careers" class="nav-bar__link" routerLinkActive="nav-bar__link--selected">CAREERS</a>
     </li>
   </ul>
 </nav>

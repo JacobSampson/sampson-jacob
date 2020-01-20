@@ -5,7 +5,12 @@
   bottom: 0;
   left: 0;
   margin: 0;
-  padding: 1em;
+  padding: 1em 3em;
+  display: flex;
+  flex: 1 1 0px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
   background-color: $col-bkgd;
   color: white;
@@ -15,7 +20,11 @@
   }
 
   &__socials {
-    // float: right;
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    padding: 0;
+    // justify-content: space-around;
 
     list-style: none;
   }
@@ -25,11 +34,21 @@
   }
 
   &__social-icon {
+    margin: 0 1em;
+    padding: 0.5em;
+
+    background-color: rgba(255, 255, 255, 0);
+    transform: scale(1);
+    border-radius: 50%;
+
     transition: 0.15s ease-in-out;
 
     &:hover {
       cursor: pointer;
-      opacity: 50%;
+      background-color: white;
+      color: $col-bkgd;
+
+      transform: scale(1.1);
     }
   }
 
@@ -38,11 +57,14 @@
   }
 
   &__pages {
+    padding: 0;
+
     list-style: none;
+    text-align: left;
   }
 
   &__page {
-
+    margin: 0 0.5em;
   }
 
   &__page-link {
@@ -59,6 +81,14 @@
       user-select: none;
       cursor: default;
       color: $col-text-disabled;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+
+    &__pages {
+      text-align: center;
     }
   }
 }
