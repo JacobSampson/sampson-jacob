@@ -9,7 +9,8 @@ export default class ContactInfo {
     public phoneNumber: number | string,
     public location: string,
     public instagramHandle?: string,
-    public resume?: File | any,
+    public resumePath?: string,
+    public resume?: File,
     public affiliate?: Map<AffiliateType, string> | any
   ) { }
 
@@ -21,7 +22,7 @@ export default class ContactInfo {
     this.phoneNumber = this.phoneNumber || '';
     this.location = this.location || '';
     this.instagramHandle = this.instagramHandle || '';
-    this.resume = this.resume || '';
+    this.resumePath = this.resumePath || '';
     this.affiliate = this.affiliate || '';
   }
 }

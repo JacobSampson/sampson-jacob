@@ -45,12 +45,11 @@
   &__resume {
     width: 0.1px;
     height: 0.1px;
+    padding: 1em 3em;
     opacity: 0;
     overflow: hidden;
     position: absolute;
-    z-index: -1;
-
-    transition: 0.25s ease-in-out;
+    // z-index: -1;
 
     & + label {
       font-size: 1.25em;
@@ -59,22 +58,27 @@
       display: inline-block;
       padding: 0.5em;
       margin: 0.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      justify-content: space-evenly;
 
-      color: $col-text-secondary;
+      color: $col-text-primary;
       font-size: 1em;
       font-weight: 400;
-      background-color: $col-bkgd;
-      border: 2px solid $col-bkgd;
+      background-color: $col-text-secondary;
+      // border: 2px solid $col-bkgd;
       cursor: pointer;
 
-      transition: 0.25s ease-in-out;
+      transition: 0.15s ease-in-out;
     }
 
     &:focus + label,
     & + label:hover {
-      background-color: white;
-      color: $col-text-primary;
-      border: 2px solid $col-bkgd;
+      cursor: pointer;
+      background-color: $col-frgd;
+      color: white;
+      // border: 2px solid $col-bkgd;
     }
   }
 

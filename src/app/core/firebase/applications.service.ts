@@ -15,13 +15,26 @@ export class ApplicationsService {
 
     // Save resume, if attached
     if (contactInfo.resume) {
-      const path = `resumes/resume_${contactInfo.id}`;
+      const path = `/resumes/resume__${contactInfo.id}`;
+
       this.fst.upload(path, contactInfo.resume).then(resume => {
-        contactInfo.resume = resume.ref.fullPath;
+        contactInfo.resumePath = resume.ref.fullPath;
         contactInfo.fill();
 
         // Save info with resume link
-        this.fs.collection('applications').doc(contactInfo.id).set({...contactInfo});
+        this.fs.collection('applications').doc(contactInfo.id).set({
+          id: contactInfo.id,
+          firstName: contactInfo.firstName,
+          lastName: contactInfo.lastName,
+          emailAddress: contactInfo.emailAddress,
+          phoneNumber: contactInfo.phoneNumber,
+          location: contactInfo.location,
+          instagramHandle: contactInfo.instagramHandle,
+          resumePath: contactInfo.resumePath,
+          affiliate: contactInfo.affiliate
+        });
+      }).catch(err => {
+        console.log('Error uploading application');
       });
     } else {
       contactInfo.fill();
